@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Greetings</title>
+        <link 
+            rel="stylesheet"
+            href="{{url_for('static', filename='style.css')}} "
+        />
+    </head>
+    <body>
+        
+        <b><p>The number is: {{number}}</p>
+        {% for number in number %}{% if number%2==0 %}
+        <p>{{number}} is an even number.</p>
+        {% else %}
+        <p>{{number}} is an odd number.</p>
+        {% endif %} {% endfor %}
+        </b>
+    </body>
+</html>
